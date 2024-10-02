@@ -1,5 +1,3 @@
-import { Chains } from '@/components/Chains';
-
 export default function Page() {
-  return <Chains />;
+  return <div>pick a chain</div>;
 }

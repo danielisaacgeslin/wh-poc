@@ -1,4 +1,8 @@
-export const IMG_BASE = 'https://fakeimg.pl/50x50/fe6f69/000000';
-
-export const PLACEHOLDER_IMAGE_ID = 'placeholder';
-export const PLACEHOLDER_IMAGE = `${IMG_BASE}?text=${PLACEHOLDER_IMAGE_ID}&font=lobster&font_size=25`;
+export const AVATAR_SIZE = 50;
+export const AVATAR_TXT_COLOR = '000000';
+export const AVATAR_BG_COLOR = 'fefd33';
+export const AVATAR_FONT = 'lobster';
+export const AVATAR_TXT_SIZE = 25;
+export const getAvatarWidthFromText = (text: string) => text.length * Math.ceil(AVATAR_TXT_SIZE / 2);
+export const getAvatarUrl = (text: string, width: number = AVATAR_SIZE) =>
+  `https://fakeimg.pl/${width}x${AVATAR_SIZE}/${AVATAR_BG_COLOR}/${AVATAR_TXT_COLOR}?text=${text}&font=${AVATAR_FONT}&font_size=${AVATAR_TXT_SIZE}`;
